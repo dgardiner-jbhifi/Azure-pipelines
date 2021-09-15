@@ -8,15 +8,17 @@
     "@types/q": "^1.5.2"
   },
   "devDependencies": {
+    "@types/jest": "^25.2.2",
     "@types/node": "^12.12.6",
-    "typescript": "^3.5.2",
+    "@vercel/ncc": "^0.31.1",
     "azure-devops-node-api": "11.0.1",
     "jest": "^26.0.1",
-    "@types/jest": "^25.2.2",
-    "ts-jest": "^25.5.1"
+    "ts-jest": "^25.5.1",
+    "typescript": "^3.5.2"
   },
   "scripts": {
     "build": "tsc",
+    "package": "ncc build lib/main.js --source-map --license licenses.txt",
     "test": "jest",
     "test-coverage": "jest --coverage"
   },
